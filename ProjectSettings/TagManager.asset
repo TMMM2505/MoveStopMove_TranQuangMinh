@@ -4,15 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Axe
+  - FxTemporaire
+  - Weapon
+  - AttackRange
+  - Enemy
+  - StraightWeapon
+  - SpinWeapon
+  - Character
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - AttackRange
   - Water
   - UI
-  - 
+  - Weapon
   - 
   - 
   - 
