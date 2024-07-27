@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9195766005679653739
 Transform:
   m_ObjectHideFlags: 0
@@ -99,7 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7dac170feca1f74ea421b4ca8bd1b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolType: 3
+  poolType: 0
+  id: 0
+  title: 
+  Lock: 
+  description: 
+  price: 0
 --- !u!54 &4119261681613128485
 Rigidbody:
   m_ObjectHideFlags: 0

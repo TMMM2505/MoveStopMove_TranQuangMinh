@@ -147,9 +147,7 @@ public enum ParticleType
 
 public enum PoolType
 {
-    None,
-    Char,
-    Weapon,
+    // Weapon 
     Axe0,
     Axe1,
     Boomerang,
@@ -162,6 +160,18 @@ public enum PoolType
     Arrow,
     Candy2,
     Knife,
+    None,
+
+    Char,
+    Weapon,
+    ScoreChar,
+    CircleTarget,
+    ItemSkinShop,
+
+    // Full Set
+    FullSetDeadPool,
+
+    Indicator,
 }
 
 

@@ -6,11 +6,10 @@ public class IdleState : State
 {
     public void OnStart(Enemy enemy)
     {
-        enemy.ChangeAnim("idle");
+        enemy.ChangeAnim("IsIdle");
     }
     public void OnExecute(Enemy enemy)
     {
-        enemy.CheckOnMove();
     }
     public void OnExit(Enemy enemy)
     {

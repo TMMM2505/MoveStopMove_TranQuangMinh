@@ -149,4 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7dac170feca1f74ea421b4ca8bd1b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolType: 9
+  poolType: 6
+  id: 0
+  title: 
+  Lock: 
+  description: 
+  price: 0

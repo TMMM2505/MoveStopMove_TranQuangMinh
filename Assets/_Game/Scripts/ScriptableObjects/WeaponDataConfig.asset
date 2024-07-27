@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a01a78e34986b4fb2aef9ae2d959cc, type: 3}
+  m_Name: WeaponDataConfig
+  m_EditorClassIdentifier: 
+  ListDataWeapon:
+  - ID: 0
+    Name: Lollipop
+    Lock: (Lock)
+    Description: +3 Range
+    Icon: {fileID: 21300000, guid: 2926ee01e2410e446b31c18bd39b894e, type: 3}
+    Price: 50
+    WeaponType: 2
+    BuffType: 1
+    Value: 3
+    prefabWeapon: {fileID: -325008152965446931, guid: 78307a9502af33449a05254bf8c1492d, type: 3}
+    prefabWeaponChar: {fileID: -2623122363195025029, guid: bd35820ab3972ac4fa3691c052b93aba, type: 3}
+  - ID: 1
+    Name: Knife
+    Lock: (Unlock  Lollipop First)
+    Description: +5 Attack Speed
+    Icon: {fileID: 21300000, guid: 2791d0e5d952dbb439646409769f39f8, type: 3}
+    Price: 100
+    WeaponType: 3
+    BuffType: 2
+    Value: 5
+    prefabWeapon: {fileID: 1683380265552795749, guid: 357b13174701d3646a282f6f74cc22f9, type: 3}
+    prefabWeaponChar: {fileID: -2741585318537616140, guid: fd51aeb6f20952c478f765db46a48ba5, type: 3}
+  - ID: 2
+    Name: Candy Cane
+    Lock: (Unlock  Knife First)
+    Description: +5 Range
+    Icon: {fileID: 21300000, guid: ae22588b654c78b4e95aecdbbd0b14fa, type: 3}
+    Price: 200
+    WeaponType: 4
+    BuffType: 1
+    Value: 5
+    prefabWeapon: {fileID: 1770436435538469645, guid: 70b73cb5d7100c54ebdcd8994685c5c7, type: 3}
+    prefabWeaponChar: {fileID: 8199704602490976567, guid: aecac0e43fc50014f9dd8c0e16a992d3, type: 3}
+  - ID: 3
+    Name: Boomerang
+    Lock: (Unlock  Candy Cane First)
+    Description: +5 Range*2
+    Icon: {fileID: 21300000, guid: 5b94bfecd29793542928fe04d126a124, type: 3}
+    Price: 400
+    WeaponType: 5
+    BuffType: 1
+    Value: 5
+    prefabWeapon: {fileID: -2578309038995521678, guid: 833aac527334f06458fdd962ee9a150c, type: 3}
+    prefabWeaponChar: {fileID: 5413003146381082862, guid: 4881af26a3ab44947a4daf051bab7283, type: 3}
+  - ID: 4
+    Name: Swirly Pop
+    Lock: (Unlock  Boomerang Cane First)
+    Description: +10 Range
+    Icon: {fileID: 21300000, guid: 5a50614dff4814d4faa9d0d0f4c5a9e6, type: 3}
+    Price: 400
+    WeaponType: 6
+    BuffType: 1
+    Value: 10
+    prefabWeapon: {fileID: 6379519538196630171, guid: 8b57b9f7cd7cc8d40a2f2e2852a15eb7, type: 3}
+    prefabWeaponChar: {fileID: -8108269530766639508, guid: 44c37e204352e3044b05bd7aa30d6a16, type: 3}
+  - ID: 5
+    Name: Axe
+    Lock: (Unlock  Swirly Pop Cane First)
+    Description: +15 Range
+    Icon: {fileID: 21300000, guid: 2ea8a580df7263d4fb91fdb96520f706, type: 3}
+    Price: 80
+    WeaponType: 7
+    BuffType: 1
+    Value: 15
+    prefabWeapon: {fileID: 6734466613456238054, guid: 3de8b4a1cc6eeb74589e3a1f18143e14, type: 3}
+    prefabWeaponChar: {fileID: 6544783137706674236, guid: bbc21d84b843e6248884968bf2178585, type: 3}
+  - ID: 6
+    Name: Ice-Cream Cone
+    Lock: (Unlock  Axe First)
+    Description: +15 Attack Speed
+    Icon: {fileID: 21300000, guid: 0b8fa231127fc5e46bbaaab6fb185d44, type: 3}
+    Price: 1000
+    WeaponType: 8
+    BuffType: 2
+    Value: 15
+    prefabWeapon: {fileID: -370785661530761237, guid: 6ea9346e6e73afc4aa4d12c72b237da5, type: 3}
+    prefabWeaponChar: {fileID: -1701572328445110396, guid: 2502be68553cb5d43b97923aa3e4cddc, type: 3}
+  - ID: 7
+    Name: Battle Axe
+    Lock: (Unlock  Ice-Cream Cone First)
+    Description: +20 Range
+    Icon: {fileID: 21300000, guid: c8ac7ce70ebc4664b8f7067c7e4140e0, type: 3}
+    Price: 1500
+    WeaponType: 9
+    BuffType: 1
+    Value: 20
+    prefabWeapon: {fileID: 3659462316302232038, guid: 00b8529abb64dd24ea43ed7c9cd48790, type: 3}
+    prefabWeaponChar: {fileID: -1498378025472851670, guid: 0d71de054e8db554795e26e7b61a7abc, type: 3}
+  - ID: 8
+    Name: Z
+    Lock: (Unlock  Battle Axe First)
+    Description: +10 Range*2
+    Icon: {fileID: 21300000, guid: 8bffbeba5b54c0747817f2436f3e0e3d, type: 3}
+    Price: 2000
+    WeaponType: 10
+    BuffType: 1
+    Value: 10
+    prefabWeapon: {fileID: -4624531773846036493, guid: 3d617f13c276c7145a95b5e4baef6390, type: 3}
+    prefabWeaponChar: {fileID: -287130338604268270, guid: b6a123030dda8ca44b3ba584a44056d8, type: 3}
+  - ID: 9
+    Name: Arrow
+    Lock: (Unlock  Z First)
+    Description: +25 Attack Speed
+    Icon: {fileID: 21300000, guid: 0ef19fded14195543b7bc5c61b15509e, type: 3}
+    Price: 2500
+    WeaponType: 11
+    BuffType: 2
+    Value: 25
+    prefabWeapon: {fileID: 2142217593552356713, guid: 74793cb6cb6b6ef4f9bb29b30dd30c67, type: 3}
+    prefabWeaponChar: {fileID: -2572935434242418056, guid: be1d0a0fd8d828944aa07fad48298d9f, type: 3}
+  - ID: 10
+    Name: Uzi
+    Lock: (Unlock Arrow First)
+    Description: +25 Range
+    Icon: {fileID: 21300000, guid: 4d46e60b9bcf89746ba7ac022f233c2a, type: 3}
+    Price: 3000
+    WeaponType: 12
+    BuffType: 1
+    Value: 25
+    prefabWeapon: {fileID: 7204382951228962907, guid: b45d2c8dcd7d58b4fab541de63196ec6, type: 3}
+    prefabWeaponChar: {fileID: 5825259303886591292, guid: 50f557ff73339e141bdebcac250d69c7, type: 3}

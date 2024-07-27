@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2477604695836909807}
+  - component: {fileID: -8108269530766639508}
   m_Layer: 0
   m_Name: candy4
   m_TagString: Untagged
@@ -32,6 +33,19 @@ Transform:
   - {fileID: 7213651803461893100}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-8108269530766639508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639669085020014560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31e31ef455567248b02c383fd649745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolType: 5
 --- !u!1 &8598071615161325657
 GameObject:
   m_ObjectHideFlags: 0

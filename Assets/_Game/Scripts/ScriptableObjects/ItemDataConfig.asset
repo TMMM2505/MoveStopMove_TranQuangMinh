@@ -1,0 +1,293 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bab0aff17c976418a5877abbd81d07, type: 3}
+  m_Name: ItemDataConfig
+  m_EditorClassIdentifier: 
+  ListHats:
+  - data:
+      ID: 0
+      Name: Beard
+      Description: 5% Range
+      Icon: {fileID: 21300000, guid: 37a26edb2e7bb7f4db2dfa780d29342b, type: 3}
+      Price: 500
+      ItemType: 2
+      BuffType: 5
+      Value: 5
+    hat: {fileID: 3561515504474825181, guid: 806061cc8592bba4bbd1e284054f4f8f, type: 3}
+  - data:
+      ID: 1
+      Name: Crown
+      Description: 5% Range
+      Icon: {fileID: 21300000, guid: 30d3e62c297db0746961b77a83a3f304, type: 3}
+      Price: 500
+      ItemType: 2
+      BuffType: 5
+      Value: 5
+    hat: {fileID: 2010724532409660420, guid: 72e4e4206e2cae64b90e5abd0f7fa7b5, type: 3}
+  - data:
+      ID: 2
+      Name: Ear
+      Description: 5% Range
+      Icon: {fileID: 21300000, guid: ef5a5bc47a5103f4098a7253cbf299c1, type: 3}
+      Price: 500
+      ItemType: 2
+      BuffType: 5
+      Value: 5
+    hat: {fileID: 7883063889735795245, guid: dd01ca6a102c9c74c91348d5e9df99fd, type: 3}
+  - data:
+      ID: 3
+      Name: Hat
+      Description: 5% Range
+      Icon: {fileID: 21300000, guid: b1fadd222fd73144cb69018906583041, type: 3}
+      Price: 500
+      ItemType: 2
+      BuffType: 5
+      Value: 5
+    hat: {fileID: 4296800608908435684, guid: 561eb130cda30c6489c4b6719c12d1fa, type: 3}
+  - data:
+      ID: 4
+      Name: Police
+      Description: 5% Range
+      Icon: {fileID: 21300000, guid: 9adf0c37d747d93409f1cf1251b2fe02, type: 3}
+      Price: 500
+      ItemType: 2
+      BuffType: 5
+      Value: 5
+    hat: {fileID: 2262667127749885347, guid: 291dcbd33d3b8d04191700d5a7109b5a, type: 3}
+  - data:
+      ID: 5
+      Name: MuRom
+      Description: 5% Range
+      Icon: {fileID: 21300000, guid: fbd312293b1a52349bf6d5259aa698e5, type: 3}
+      Price: 500
+      ItemType: 2
+      BuffType: 5
+      Value: 5
+    hat: {fileID: 5060706255583806595, guid: 43aae79fc96384e459403daceb4c908c, type: 3}
+  - data:
+      ID: 6
+      Name: Arrow
+      Description: 5% Range
+      Icon: {fileID: 21300000, guid: 9c9ad513813bfbd48a2826f0524629ea, type: 3}
+      Price: 500
+      ItemType: 2
+      BuffType: 5
+      Value: 5
+    hat: {fileID: 5075964860611775677, guid: d6b5046576a1a804ea8dcf155c385c42, type: 3}
+  - data:
+      ID: 7
+      Name: Cowboy
+      Description: 5% Range
+      Icon: {fileID: 21300000, guid: a7355e5ff6d2a19489a65f6210a42f63, type: 3}
+      Price: 500
+      ItemType: 2
+      BuffType: 5
+      Value: 5
+    hat: {fileID: 7921997432157581094, guid: fd1759aeef5a52c47b78bf9a93afc69a, type: 3}
+  - data:
+      ID: 8
+      Name: Headphone
+      Description: 5% Range
+      Icon: {fileID: 21300000, guid: f428ad7271085ab4cb289d4c51b801a6, type: 3}
+      Price: 500
+      ItemType: 2
+      BuffType: 5
+      Value: 5
+    hat: {fileID: 671332278320574844, guid: 88724c2e8d9a9664ba95c7e1fcd2bbf3, type: 3}
+  ListPants:
+  - data:
+      ID: 0
+      Name: ChamBi
+      Description: 8% Move Speed
+      Icon: {fileID: 21300000, guid: a487d85a42332444785fb80c3dc5bce8, type: 3}
+      Price: 500
+      ItemType: 3
+      BuffType: 3
+      Value: 0
+    pant: {fileID: 2100000, guid: 7c707da318b593c4ca81fb4165667bc1, type: 2}
+  - data:
+      ID: 1
+      Name: CoMy
+      Description: 8% Move Speed
+      Icon: {fileID: 21300000, guid: 1906bc4862954ea45a54c67058783562, type: 3}
+      Price: 500
+      ItemType: 3
+      BuffType: 3
+      Value: 0
+    pant: {fileID: 2100000, guid: d6a177b57b4c08846861a605906150b1, type: 2}
+  - data:
+      ID: 2
+      Name: DaBao
+      Description: 8% Move Speed
+      Icon: {fileID: 21300000, guid: e171d9494b6685e479fcddc6fd64ca75, type: 3}
+      Price: 500
+      ItemType: 3
+      BuffType: 3
+      Value: 0
+    pant: {fileID: 2100000, guid: 33af4c7c39211cf40b0618fb9c243b66, type: 2}
+  - data:
+      ID: 3
+      Name: CuHanh
+      Description: 8% Move Speed
+      Icon: {fileID: 21300000, guid: 1d222df8dc87e7d41b0c4c2cab2f51ac, type: 3}
+      Price: 500
+      ItemType: 3
+      BuffType: 3
+      Value: 0
+    pant: {fileID: 2100000, guid: 2492fdcf493614443905db384c9dfa5f, type: 2}
+  - data:
+      ID: 4
+      Name: CauVong
+      Description: 8% Move Speed
+      Icon: {fileID: 21300000, guid: 762124013be11b14da72781ceccd7c62, type: 3}
+      Price: 500
+      ItemType: 3
+      BuffType: 3
+      Value: 0
+    pant: {fileID: 2100000, guid: 7554acae4e81c204786fb9f5e8b27bd1, type: 2}
+  - data:
+      ID: 5
+      Name: VanTIm
+      Description: 8% Move Speed
+      Icon: {fileID: 21300000, guid: cf07ff20da680c243b7863fee0e25cd1, type: 3}
+      Price: 500
+      ItemType: 3
+      BuffType: 3
+      Value: 0
+    pant: {fileID: 2100000, guid: 11ecdbaffbc2986449ed2a9d4b9f9146, type: 2}
+  - data:
+      ID: 6
+      Name: Batman
+      Description: 8% Move Speed
+      Icon: {fileID: 21300000, guid: 2756de5a7befd2d4da5d54c9b50dc1f7, type: 3}
+      Price: 500
+      ItemType: 3
+      BuffType: 3
+      Value: 0
+    pant: {fileID: 2100000, guid: b768ea62802a0cf41b37ca907b7cc434, type: 2}
+  - data:
+      ID: 7
+      Name: Pokemon
+      Description: 8% Move Speed
+      Icon: {fileID: 21300000, guid: 01cbd3f15c3222f47acf27fd59f1f400, type: 3}
+      Price: 500
+      ItemType: 3
+      BuffType: 3
+      Value: 0
+    pant: {fileID: 2100000, guid: 6176c0d864fbb0a479ee611610312a94, type: 2}
+  - data:
+      ID: 8
+      Name: Skull
+      Description: 8% Move Speed
+      Icon: {fileID: 21300000, guid: 593429fbcaadb4d4f98d04d32f7232e7, type: 3}
+      Price: 500
+      ItemType: 3
+      BuffType: 3
+      Value: 0
+    pant: {fileID: 2100000, guid: eb05d13eb91e33a41b0baa4e813128da, type: 2}
+  ListShields:
+  - data:
+      ID: 0
+      Name: My
+      Description: 25% Gold
+      Icon: {fileID: 21300000, guid: fcad9bb46a5e4144faf6453e10483157, type: 3}
+      Price: 500
+      ItemType: 5
+      BuffType: 2
+      Value: 25
+    shield: {fileID: 2812382178541557019, guid: 6876948ff4bf5f242aa6b8035254745d, type: 3}
+  - data:
+      ID: 1
+      Name: Bao
+      Description: 25% Gold
+      Icon: {fileID: 21300000, guid: 3a76d0eb979e7904f95c087927574509, type: 3}
+      Price: 500
+      ItemType: 5
+      BuffType: 2
+      Value: 25
+    shield: {fileID: 7856704784632344728, guid: d4fbec9786f40ea47a4ca0444a093c0b, type: 3}
+  ListFullSet:
+  - data:
+      ID: 0
+      Name: Evil
+      Description: 8% Range
+      Icon: {fileID: 21300000, guid: 591bf6bd34c3a3c4e9143ba55a6c7d7b, type: 3}
+      Price: 2500
+      ItemType: 6
+      BuffType: 5
+      Value: 8
+    setFull: {fileID: 0}
+    hat: {fileID: 7138752255901982901, guid: 3872d30d8f5dc2548bfc7cf103cb30d8, type: 3}
+    pant: {fileID: 2100000, guid: f5e4d92ad3a18b84896a3160bebba29e, type: 2}
+    wing: {fileID: 7705202025456956178, guid: d1712c2285cd9744cab32d0182f1cc0f, type: 3}
+    tail: {fileID: 5619008274363300426, guid: 9457ce796affefe4b84652ee8a204ad5, type: 3}
+    leftHandWeapon: {fileID: 0}
+  - data:
+      ID: 1
+      Name: Angel
+      Description: 11% Move Speed
+      Icon: {fileID: 21300000, guid: 9f8e6f5ea0f849447b464193072ab6f3, type: 3}
+      Price: 2500
+      ItemType: 6
+      BuffType: 3
+      Value: 11
+    setFull: {fileID: 0}
+    hat: {fileID: 7658117277295561047, guid: c9e9fa8b8ecb237469a40d3da9b0024c, type: 3}
+    pant: {fileID: 0}
+    wing: {fileID: 4671134056670674084, guid: b710406c2adcd094e89dee80b67d6155, type: 3}
+    tail: {fileID: 0}
+    leftHandWeapon: {fileID: 187119793389570666, guid: 3ddfdd6a198bd4f4f8b5c546f941da3a, type: 3}
+  - data:
+      ID: 2
+      Name: Witch
+      Description: 15% Gold
+      Icon: {fileID: 21300000, guid: 916eb971e2dc28b419a242fa6950df78, type: 3}
+      Price: 3000
+      ItemType: 6
+      BuffType: 2
+      Value: 15
+    setFull: {fileID: 0}
+    hat: {fileID: 1203794531926548821, guid: 0db5bb33961cb9342aa044a98b24d39d, type: 3}
+    pant: {fileID: 0}
+    wing: {fileID: 0}
+    tail: {fileID: 0}
+    leftHandWeapon: {fileID: 6877914828857934505, guid: 86704ebf22b30ed42bfb71d1b9893a5b, type: 3}
+  - data:
+      ID: 3
+      Name: Deadpool
+      Description: 20% Gold
+      Icon: {fileID: 21300000, guid: 7965f490c2ec6044d854d957fe85186e, type: 3}
+      Price: 3500
+      ItemType: 6
+      BuffType: 2
+      Value: 20
+    setFull: {fileID: 2100000, guid: 3395fe89c41bf5942bb660f661b24ac4, type: 2}
+    hat: {fileID: 0}
+    pant: {fileID: 0}
+    wing: {fileID: 367938107768178907, guid: 11f9357c7c5352c46aeba969ffc47fa8, type: 3}
+    tail: {fileID: 0}
+    leftHandWeapon: {fileID: 0}
+  - data:
+      ID: 4
+      Name: Thor
+      Description: 30% Range
+      Icon: {fileID: 21300000, guid: 0363a7557b133774f99bf84dcf6fcbed, type: 3}
+      Price: 5000
+      ItemType: 6
+      BuffType: 5
+      Value: 30
+    setFull: {fileID: 2100000, guid: d36c671489867694587fe4b4dda9d75d, type: 2}
+    hat: {fileID: 1907004225428396472, guid: d9521d565359b134a94a47f68d62cfe9, type: 3}
+    pant: {fileID: 0}
+    wing: {fileID: 0}
+    tail: {fileID: 0}
+    leftHandWeapon: {fileID: 0}

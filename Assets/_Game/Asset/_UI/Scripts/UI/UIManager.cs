@@ -21,6 +21,7 @@ using UnityEngine.Events;
 
 public class UIManager : Singleton<UIManager>
 {
+    public UICGamePlay GamePlay;
     //dict for quick query UI prefab
     //dict dung de lu thong tin prefab canvas truy cap cho nhanh
     private Dictionary<System.Type, UICanvas> uiCanvasPrefab = new Dictionary<System.Type, UICanvas>();
@@ -36,7 +37,7 @@ public class UIManager : Singleton<UIManager>
     //canvas container, it should be a canvas - root
     //canvas chua dung cac canvas con, nen la mot canvas - root de chua cac canvas nay
     public Transform CanvasParentTF;
-
+    private UICanvas lastCanvas;
     #region Canvas
 
     //open UI
@@ -47,10 +48,23 @@ public class UIManager : Singleton<UIManager>
 
         canvas.Setup();
         canvas.Open();
-
+        /*if(canvas.GetComponent<UICGamePlay>() != null && GameManager.Ins.CheckReplay())
+        {
+            GamePlay.ResetTimer();
+        }*/
         return canvas as T;
     }
-
+    public void OpenLastCanvas()
+    {
+        if(lastCanvas != null)
+        {
+            lastCanvas.gameObject.SetActive(true);
+        }
+    }
+    public void SaveLastCanvas(UICanvas lastCanvas)
+    {
+        this.lastCanvas = lastCanvas;
+    }
     //close UI directly
     //dong UI canvas ngay lap tuc
     public void CloseUI<T>() where T : UICanvas
