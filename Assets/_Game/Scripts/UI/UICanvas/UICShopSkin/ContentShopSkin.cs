@@ -21,17 +21,17 @@ public class ContentShopSkin : UICanvas
     public UICShopSkinItem GetChosenItem() => chosenItem;
     public void SelectItem(UICShopSkinItem selectedItem)
     {
-        LevelManager.Ins.GetPlayer().ResetSkin();
         chosenItem = selectedItem;
         txtDescription.text = chosenItem.description;
         SetPrice?.Invoke();
-        LevelManager.Ins.GetPlayer().ChangeSkin(chosenItem.id, skinType);
         for(int i = 0; i < listItem.Count; i++)
         {
             if (listItem[i] == selectedItem)
             {
                 if(lastItem != chosenItem)
                 {
+                    LevelManager.Ins.GetPlayer().ResetSkin();
+                    LevelManager.Ins.GetPlayer().ChangeSkin(chosenItem.id, skinType);
                     listItem[i].ActiveFrame();
                     lastItem = chosenItem;
                 }

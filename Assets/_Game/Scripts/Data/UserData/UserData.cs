@@ -47,7 +47,7 @@ public class UserData : Singleton<UserData>
         LevelManager.Ins.GetPlayer().ResetSkin();
 
         PlayerPrefs.DeleteKey(Constants.KeyCurrentExp);
-        SetCurrentExp(49);
+        SetCurrentExp(50);
 
         SetSound(true);
         SetVibe(false);
@@ -172,11 +172,6 @@ public class UserData : Singleton<UserData>
     {
         PlayerPrefs.SetFloat(Constants.KeyCurrentExp, exp);
     }
-    public void SetNewCurrentExp()
-    {
-        PlayerPrefs.SetFloat(Constants.KeyCurrentExp, 0);
-    }
-
 
     public void SetIndexCurrentMap(int index)
     {

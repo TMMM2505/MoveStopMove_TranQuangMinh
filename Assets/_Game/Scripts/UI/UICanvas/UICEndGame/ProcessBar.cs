@@ -14,12 +14,14 @@ public class ProcessBar : MonoBehaviour
     //[SerializeField] private Image IconLock1;
 
     private float curScore, maxScore;
-
+    private Tweener myTween;
     public void OnInit(float maxScore, float curScore)
     {
         this.curScore = curScore;
         this.maxScore = maxScore;
         txtExp.text = string.Format("{0:000}/{1:000}", curScore, maxScore);
+        myTween = transform.DOScale(new Vector3(1.1f, 1.1f, 1.1f), 0.5f)
+                 .SetLoops(-1, LoopType.Yoyo);
     }
     public void SetBarEndGame()
     {
@@ -34,7 +36,7 @@ public class ProcessBar : MonoBehaviour
         else
         {
             background.color = Color.green;
-            txtExp.text = "Finish";
+            txtExp.text = ">>>>>> Finish!!! <<<<<<";
         }
     }
     public void SetBarChoseMap()
@@ -56,13 +58,16 @@ public class ProcessBar : MonoBehaviour
         {
             background.color = Color.green;
             txtExp.color = Color.black;
+            myTween.Play();
         }
         else
         {
             background.color = Color.black;
             txtExp.color = Color.white;
+            myTween.Pause();
         }
     }
+
     //public void UnlockIcon1()
     //{
     //    Icon1.color = Color.green;

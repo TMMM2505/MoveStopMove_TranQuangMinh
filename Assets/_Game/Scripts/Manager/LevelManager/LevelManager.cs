@@ -151,9 +151,7 @@ public class LevelManager : Singleton<LevelManager>
             currentMap.gameObject.SetActive(true);
         }
         SetrequiredExpIndex();
-        Debug.Log(requiredExpIndex);
         maxCurrentScore = maxScore[requiredExpIndex];
-        //Debug.Log("LV Mng: " + indexCurMap);
     }
     public float GetPlayerScore()
     {

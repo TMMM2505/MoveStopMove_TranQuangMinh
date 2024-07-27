@@ -31,7 +31,11 @@ public class TimerCountDown : MonoBehaviour
             }
         }
     }
-
+    public void ResetTimer()
+    {
+        timeRemaining = 180;
+        timerIsRunning = false;
+    }
     public void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;

@@ -37,7 +37,7 @@ public class UICGamePlay : UICanvas
     }
     public void ResetTimer()
     {
-        timer.OnStart();
+        timer.ResetTimer();
     }
     private void SetConstructor()
     {
@@ -46,6 +46,7 @@ public class UICGamePlay : UICanvas
 
         LevelManager.Ins.ActiveEnemy();
         LevelManager.Ins.GetPlayer().SetCanMove(true);
+        timer.OnStart();
     }
     private void OnClickSetting()
     {

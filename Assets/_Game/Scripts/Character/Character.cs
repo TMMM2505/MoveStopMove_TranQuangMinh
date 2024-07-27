@@ -308,7 +308,6 @@ public class Character : GameUnit
             {
                 score += (buffCoin * score) / 100;
             }
-            score++;
         }
         else
         {
@@ -363,12 +362,14 @@ public class Character : GameUnit
                             {
                                 pmtHead = Instantiate(GameManager.Ins.ItemDataConfig.ListHats[idSkin].hat, RauPos.transform.position, Quaternion.Euler(0,0,0));
                                 pmtHead.transform.forward = RauPos.transform.forward;
+                                pmtHead.transform.position = RauPos.transform.position;
                                 pmtHead.transform.SetParent(RauPos.transform);
                             }
                             else
                             {
                                 pmtHead = Instantiate(GameManager.Ins.ItemDataConfig.ListHats[idSkin].hat, head.transform.position, Quaternion.Euler(0, 0, 0));
                                 pmtHead.transform.forward = head.transform.forward;
+                                pmtHead.transform.position = head.transform.position;
                                 pmtHead.transform.SetParent(head.transform);
                             }
                     }
@@ -381,7 +382,6 @@ public class Character : GameUnit
                 {
                     if (GameManager.Ins.ItemDataConfig.ListPants[idSkin] != null && i == idSkin)
                     {
-                        Debug.Log("Change pant");
                         pant.gameObject.GetComponent<SkinnedMeshRenderer>().material = GameManager.Ins.ItemDataConfig.ListPants[idSkin].pant;
                     }
                 }
@@ -393,7 +393,6 @@ public class Character : GameUnit
                 {
                     if (GameManager.Ins.ItemDataConfig.ListShields[idSkin] != null && i == idSkin)
                     {
-                        Debug.Log("Change shield");
                         pmtShield = Instantiate(GameManager.Ins.ItemDataConfig.ListShields[idSkin].shield, leftHand.transform.position, Quaternion.identity);
                         pmtShield.transform.SetParent(leftHand.transform);
                     }
@@ -406,7 +405,6 @@ public class Character : GameUnit
                     {
                         if (GameManager.Ins.ItemDataConfig.ListFullSet[idSkin] != null && i == idSkin)
                         {
-                            Debug.Log("Change Full Set");
        
                             if (GameManager.Ins.ItemDataConfig.ListFullSet[idSkin].setFull)
                             {

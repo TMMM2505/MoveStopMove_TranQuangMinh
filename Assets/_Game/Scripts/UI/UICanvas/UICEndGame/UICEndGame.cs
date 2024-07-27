@@ -10,6 +10,7 @@ public class UICEndGame : UICanvas
     public TextMeshProUGUI txtCoin;
     public GameObject PanelTxtInfoEnemy;
     public GameObject PanelVictory;
+    public GameObject PanelTimeOut;
     public Button BtnReplay;
     private void Start()
     {
@@ -18,11 +19,22 @@ public class UICEndGame : UICanvas
         {
             PanelTxtInfoEnemy.SetActive(false);
             PanelVictory.SetActive(true);
+            PanelTimeOut.SetActive(false);
         }
         else
         {
-            PanelTxtInfoEnemy.SetActive(true);
-            PanelVictory.SetActive(false);
+            if(LevelManager.Ins.GetPlayer().IsDead()) 
+            {
+                PanelTxtInfoEnemy.SetActive(true);
+                PanelVictory.SetActive(false);
+                PanelTimeOut.SetActive(false);
+            }
+            else
+            {
+                PanelTxtInfoEnemy.SetActive(false);
+                PanelVictory.SetActive(false);
+                PanelTimeOut.SetActive(true);
+            }
         }
         ShowGainedCoin();
         processBar.OnInit(LevelManager.Ins.GetMaxScore(), UserData.Ins.GetCurrentExp());
