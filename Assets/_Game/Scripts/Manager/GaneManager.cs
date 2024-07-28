@@ -10,13 +10,13 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] CameraFollower camera;
     [SerializeField] private UICIndicator uicIndicator;
+    public ItemDataConfig ItemDataConfig;
     private UICEndGame uicEndGame;
     private UICGamePlay uicGamePlay;
     private UICChoseMap uICChoseMap;
     private UICMainMenu uicMainMenu;
     private UICSetting uicSetting;
     public GameState CurrentGameState { get; private set; }
-    public ItemDataConfig ItemDataConfig;
     private bool Replay = false;
     private bool IsPlaying = false;
 

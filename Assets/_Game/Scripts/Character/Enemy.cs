@@ -44,6 +44,33 @@ public class Enemy : Character
     {
         agent = GetComponent<NavMeshAgent>();
         ChangeState(new IdleState());
+        int r1 = Random.Range(0, 4);
+        int maxR2 = 2;
+        int r2;
+        if(r1 == 0)
+        {
+            maxR2 = GameManager.Ins.ItemDataConfig.ListHats.Count;
+            r2 = Random.Range(0, maxR2);
+            ChangeSkin(r2, EItemType.Hat);
+        }
+        else if(r1 == 1) 
+        {
+            maxR2 = GameManager.Ins.ItemDataConfig.ListPants.Count;
+            r2 = Random.Range(0, maxR2);
+            ChangeSkin(r2, EItemType.Pant);
+        }
+        else if (r1 == 2)
+        {
+            maxR2 = GameManager.Ins.ItemDataConfig.ListShields.Count;
+            r2 = Random.Range(0, maxR2);
+            ChangeSkin(r2, EItemType.Shield);
+        }
+        else if (r1 == 3)
+        {
+            maxR2 = GameManager.Ins.ItemDataConfig.ListFullSet.Count;
+            r2 = Random.Range(0, maxR2);
+            ChangeSkin(r2, EItemType.FullSet);
+        }
     }
     public void FindRandomTarget()
     {

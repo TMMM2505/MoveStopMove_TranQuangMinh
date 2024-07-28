@@ -47,7 +47,7 @@ public class UserData : Singleton<UserData>
         LevelManager.Ins.GetPlayer().ResetSkin();
 
         PlayerPrefs.DeleteKey(Constants.KeyCurrentExp);
-        SetCurrentExp(50);
+        SetCurrentExp(49);
 
         SetSound(true);
         SetVibe(false);

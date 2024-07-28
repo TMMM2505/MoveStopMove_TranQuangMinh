@@ -189,17 +189,16 @@ public class UICShopSkin : UICanvas
         ContentFullSet.SetPrice = CheckBtnState;
 
 
-        ContentHat.SpawnItem();
-        ContentPant.SpawnItem();
-        ContentShield.SpawnItem();
         ContentFullSet.SpawnItem();
+        ContentShield.SpawnItem();
+        ContentPant.SpawnItem();
+        ContentHat.SpawnItem();
 
         OnClickBtnHat();
         CheckBtnState();
     }
     public void CheckBtnState()
     {
-        
         if(ContentHat.gameObject.active)
         {
             if (UserData.Ins.ListOwnedHatId.Contains(ContentHat.GetChosenItem().id))
@@ -211,7 +210,6 @@ public class UICShopSkin : UICanvas
                 else
                 {
                     ActiveBtnOwned();
-
                 }
             }
             else
@@ -239,13 +237,12 @@ public class UICShopSkin : UICanvas
                 else
                 {
                     ActiveBtnOwned();
-
                 }
             }
             else
             {
                 txtItemCoin.text = ContentPant.GetChosenItem().price.ToString();
-                if (curContent.GetChosenItem().price >= UserData.Ins.GetCoin())
+                if (curContent.GetChosenItem().price <= UserData.Ins.GetCoin())
                 {
                     txtItemCoin.color = Color.white;
                 }
@@ -273,7 +270,7 @@ public class UICShopSkin : UICanvas
             else
             {
                 txtItemCoin.text = ContentShield.GetChosenItem().price.ToString();
-                if (curContent.GetChosenItem().price >= UserData.Ins.GetCoin())
+                if (curContent.GetChosenItem().price <= UserData.Ins.GetCoin())
                 {
                     txtItemCoin.color = Color.white;
                 }
@@ -295,13 +292,12 @@ public class UICShopSkin : UICanvas
                 else
                 {
                     ActiveBtnOwned();
-
                 }
             }
             else
             {
                 txtItemCoin.text = ContentFullSet.GetChosenItem().price.ToString();
-                if (curContent.GetChosenItem().price >= UserData.Ins.GetCoin())
+                if (curContent.GetChosenItem().price <= UserData.Ins.GetCoin())
                 {
                     txtItemCoin.color = Color.white;
                 }
@@ -366,6 +362,8 @@ public class UICShopSkin : UICanvas
         ContentPant.gameObject.SetActive(true);
         curContent = ContentPant;
         ContentPant.SetBtn?.Invoke();
+        curContent.SelectFirstItem();
+
     }
 
     private void OnClickBtnClothes()
@@ -375,6 +373,7 @@ public class UICShopSkin : UICanvas
         ContentFullSet.gameObject.SetActive(true);
         curContent = ContentFullSet;
         ContentFullSet.SetBtn?.Invoke();
+        curContent.SelectFirstItem();
 
     }
 
@@ -385,6 +384,8 @@ public class UICShopSkin : UICanvas
         ContentShield.gameObject.SetActive(true);
         curContent = ContentShield;
         ContentShield.SetBtn?.Invoke();
+        curContent.SelectFirstItem();
+
     }
 
     private void OnClickBtnHat()
@@ -394,6 +395,7 @@ public class UICShopSkin : UICanvas
         ContentHat.gameObject.SetActive(true);
         ContentHat.SetBtn?.Invoke();
         curContent = ContentHat;
+        curContent.SelectFirstItem();
 
     }
     public void CloseAllTag()

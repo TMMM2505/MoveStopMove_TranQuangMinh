@@ -30,12 +30,14 @@ public class UICMainMenu : UICanvas
     {
         BtnVibe.OnClick();
         UserData.Ins.SetVibe(BtnVibe.CheckOn());
+        Debug.Log(UserData.Ins.GetCheckOnSound() + " " + UserData.Ins.GetCheckOnVibe());
     }
 
     private void OnClickSound()
     {
         BtnSound.OnClick();
         UserData.Ins.SetSound(BtnSound.CheckOn());
+        Debug.Log(UserData.Ins.GetCheckOnSound() + " " + UserData.Ins.GetCheckOnVibe());
     }
 
     private void OnClickChoseMap()
@@ -76,7 +78,8 @@ public class UICMainMenu : UICanvas
     }
     public void SetUpFunction()
     {
-        if(UserData.Ins.GetCheckOnSound())
+        Debug.Log(UserData.Ins.GetCheckOnSound() + " " + UserData.Ins.GetCheckOnVibe());
+        if (UserData.Ins.GetCheckOnSound())
         {
             BtnSound.TurnOn();
         }

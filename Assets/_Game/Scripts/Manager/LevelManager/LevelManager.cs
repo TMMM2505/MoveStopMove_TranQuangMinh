@@ -15,7 +15,6 @@ public class LevelManager : Singleton<LevelManager>
     private GameObject[] startPoint;
     private Map currentMap;
     private float maxCurrentScore;
-
     private int EnemyRemain = 70, indexCurMap = 0;
     private int requiredExpIndex;
     private void Start()

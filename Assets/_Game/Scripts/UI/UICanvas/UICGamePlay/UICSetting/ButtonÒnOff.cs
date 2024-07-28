@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using DG.Tweening;
 
 public class ButtonOnOff : MonoBehaviour
 {
@@ -10,14 +11,8 @@ public class ButtonOnOff : MonoBehaviour
     public GameObject posOn;
     public GameObject Off;
     public GameObject posOff;
-    public IconOnOff IconBtn;
 
-    private bool checkOn = true;
-    private void Awake()
-    {
-        IconBtn.GetComponent<Button>().onClick.AddListener(OnClick);
-    }
-
+    private bool checkOn;
     public void OnClick()
     {
         if (checkOn)
@@ -48,16 +43,21 @@ public class ButtonOnOff : MonoBehaviour
         On.gameObject.SetActive(true);
         Off.gameObject.SetActive(false);
 
-        IconBtn.OnClick(posOff.transform.position);
-        IconBtn.GetComponent<Image>().color = Color.green;
+        OnClick(posOff.transform.position);
+        GetComponent<Image>().color = Color.green;
     }
     public void SetOff()
     {
         On.gameObject.SetActive(false);
         Off.gameObject.SetActive(true);
 
-        IconBtn.OnClick(posOn.transform.position);
-        IconBtn.GetComponent<Image>().color = Color.red;
+        OnClick(posOn.transform.position);
+        GetComponent<Image>().color = Color.red;
     }
     public bool CheckOn() => checkOn;
+    public void OnClick(Vector3 pos)
+    {
+        //transform.DOMove(pos, 1f, true).SetEase(Ease.Linear);
+        transform.position = pos;
+    }
 }

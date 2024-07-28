@@ -58,17 +58,21 @@ public class Character : GameUnit
     protected float forceThrow, increase = 1.5f;
     protected string currentAnim;
     protected bool inAttackRange, canA = false, isAttack;
-    protected float CoolDownTime = 1.5f;  
-    protected float buffCoin;      
+    protected float CoolDownTime = 1.5f;
+    protected float buffCoin, buffEnd;
+    protected int curIdSkin;
+    protected EItemType curItemType;
 
     public Action<Character> OnDeadRemove;
     public Action<Character> HitChar;
     public UnityAction Respawn;
     public UnityAction isDead;
+    public UnityAction<float> buffCoinEndMatch;
 
     protected void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        buffCoinEndMatch = BuffCoinEndMatch;
     }
     public void OnInit(Vector3 startPoint, int equippedWeaponId)
     {
@@ -157,15 +161,16 @@ public class Character : GameUnit
                 }
             case EBuffType.GoldEarnEndMatch:
                 {
-                    buffCoinEndMatch(value);
+                    buffCoinEndMatch = BuffCoinEndMatch;
+                    buffEnd = value;
                     break;
                 }
         }
     }
 
-    private void buffCoinEndMatch(float value)
+    private void BuffCoinEndMatch(float value)
     {
-        score += (value + 100) / 100;
+        score *= (value + 100) / 100;
     }
 
     public void buffCoinPerKill(float value)
@@ -178,14 +183,14 @@ public class Character : GameUnit
         score = 1;
         canA = true;
         StopAllCoroutines();
-
         // delete list enemy
         attackRange.ResetListEnemy();
 
         // destroy UIWeapon & weapon
         myWeapon.Clear();
 
-        // destroy skin
+        // reset skin
+        ChangeSkin(curIdSkin, curItemType);
 
         // scale
         TF.localScale = new Vector3 (1f, 1f, 1f);
@@ -267,7 +272,8 @@ public class Character : GameUnit
     {
         if (GetComponent<Player>())
         {
-            UserData.Ins.SetCoin(score + UserData.Ins.GetCoin());
+            buffCoinEndMatch?.Invoke(buffEnd);
+            UserData.Ins.SetCoin(score + (buffCoin * score) / 100 + UserData.Ins.GetCoin());
         }
         ChangeAnim("IsDead");
 
@@ -302,17 +308,7 @@ public class Character : GameUnit
     }
     protected void HitTartget(Character enemy)
     {
-        if(GetComponent<Player>())
-        {
-            if(buffCoin != 0)
-            {
-                score += (buffCoin * score) / 100;
-            }
-        }
-        else
-        {
-            score++;
-        }
+        score++;
         if(score % 5 == 0)
         {
             float x = score / 3;
@@ -350,6 +346,8 @@ public class Character : GameUnit
     {
         ResetSkin();
         ResetBuff();
+        curIdSkin = idSkin;
+        curItemType = skinType;
         switch (skinType)
         {
             case EItemType.Hat:

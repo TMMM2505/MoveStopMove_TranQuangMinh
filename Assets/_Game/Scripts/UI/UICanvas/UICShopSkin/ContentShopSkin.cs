@@ -166,4 +166,8 @@ public class ContentShopSkin : UICanvas
         }
         return check;
     }
+    public void SelectFirstItem()
+    {
+        SelectItem(listItem[0]);
+    }
 }

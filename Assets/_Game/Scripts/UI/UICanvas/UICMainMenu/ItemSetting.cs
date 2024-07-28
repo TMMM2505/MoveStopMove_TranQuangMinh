@@ -13,13 +13,11 @@ public class ItemSetting : MonoBehaviour
         if(checkOn)
         {
             TurnOff();
-
             checkOn = false;
         }
         else
         {
             TurnOn();
-
             checkOn = true;
         }
     }
