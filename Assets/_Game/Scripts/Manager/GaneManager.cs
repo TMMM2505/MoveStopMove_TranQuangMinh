@@ -104,7 +104,6 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 1f;
         LevelManager.Ins.DeactiveEnemy();
         LevelManager.Ins.ActivePlayer();
-        LevelManager.Ins.GetPlayer().SetEquippedSkin();
 
         uicMainMenu = UIManager.Ins.OpenUI<UICMainMenu>();
         uicMainMenu.SetUpFunction();

@@ -78,7 +78,6 @@ public class UICMainMenu : UICanvas
     }
     public void SetUpFunction()
     {
-        Debug.Log(UserData.Ins.GetCheckOnSound() + " " + UserData.Ins.GetCheckOnVibe());
         if (UserData.Ins.GetCheckOnSound())
         {
             BtnSound.TurnOn();

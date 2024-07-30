@@ -190,7 +190,7 @@ public class Character : GameUnit
         myWeapon.Clear();
 
         // reset skin
-        ChangeSkin(curIdSkin, curItemType);
+        //ChangeSkin(curIdSkin, curItemType);
 
         // scale
         TF.localScale = new Vector3 (1f, 1f, 1f);
@@ -582,7 +582,6 @@ public class Character : GameUnit
                 {
                     setCircleTarget = false;
                     circleTarget.SetPosition(target);
-                    Debug.Log("Set target available");
                 }
                 else 
                 {

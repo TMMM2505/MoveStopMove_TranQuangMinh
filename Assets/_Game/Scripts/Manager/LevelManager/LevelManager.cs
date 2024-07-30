@@ -43,7 +43,6 @@ public class LevelManager : Singleton<LevelManager>
         LoadMap(UserData.Ins.GetIndexCurrentMap());
         //Gen Character
         bool genPlayer = true;
-
         int r1, r2;
         for (int i = 0; i < startPoint.Length; i++)  
         {

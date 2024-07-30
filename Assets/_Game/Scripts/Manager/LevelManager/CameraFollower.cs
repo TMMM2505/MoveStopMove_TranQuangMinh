@@ -34,8 +34,8 @@ public class CameraFollower : MonoBehaviour
     }
     public void OnGamePlay()
     {
-        offset.y = 25f;
-        offset.z = -35f;
+        offset.y = 15f;
+        offset.z = -25f;
         transform.rotation = Quaternion.Euler(30, 0, 0);
     }
     public void Change()

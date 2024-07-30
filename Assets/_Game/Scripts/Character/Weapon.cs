@@ -26,7 +26,6 @@ public class Weapon : GameUnit
             {
                 TF.Rotate(Vector3.back, 800f * Time.deltaTime, Space.Self);
             }
-            Debug.Log("check");
             if (Vector3.Distance(startP, TF.position) >= (owner.GetR() + 3f) && !hit && !isBmr)
             {
                 if(this.poolType != PoolType.Boomerang)
